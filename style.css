@@ -1,0 +1,1042 @@
+
+/* =========================================================
+   ASSY5 MEMORIES
+   Modern Travel Yearbook Style
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background: #f6f3ee;
+    color: #292724;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    z-index: 1000;
+
+    background: rgba(28, 27, 24, 0.35);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: white;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    font-weight: 300;
+    opacity: 0.75;
+}
+
+.nav {
+    display: flex;
+    gap: 38px;
+}
+
+.nav a {
+    position: relative;
+
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.8px;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    transition: 0.3s;
+}
+
+.nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 1px;
+
+    background: white;
+
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: white;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   HOME HERO
+   ========================================================= */
+
+.home-hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            rgba(15, 15, 13, 0.38),
+            rgba(15, 15, 13, 0.58)
+        ),
+        url("images/hai-tien/01.jpg")
+        center / cover no-repeat;
+
+    color: white;
+}
+
+.home-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 0%,
+            rgba(0, 0, 0, 0.25) 100%
+        );
+}
+
+.home-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(900px, 90%);
+
+    text-align: center;
+
+    animation: fadeUp 1.2s ease;
+}
+
+.hero-label {
+    margin-bottom: 25px;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 5px;
+
+    opacity: 0.85;
+}
+
+.home-content h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(42px, 6vw, 78px);
+
+    font-weight: 500;
+
+    line-height: 1.12;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 28px;
+
+    text-shadow:
+        0 4px 25px rgba(0, 0, 0, 0.25);
+}
+
+.hero-description {
+    max-width: 620px;
+
+    margin: 0 auto 40px;
+
+    font-size: 16px;
+
+    font-weight: 300;
+
+    line-height: 1.9;
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.explore-btn {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+
+    border-radius: 50px;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color: white;
+
+    transition: 0.35s;
+}
+
+.explore-btn span {
+    font-size: 18px;
+
+    transition: 0.35s;
+}
+
+.explore-btn:hover {
+    background: white;
+    color: #292724;
+}
+
+.explore-btn:hover span {
+    transform: translateY(4px);
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about {
+    padding: 130px 8%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7f4ee,
+            #ebe5db
+        );
+}
+
+.about-content {
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.section-label {
+    margin-bottom: 18px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #8c7d69;
+}
+
+.about h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(38px, 5vw, 62px);
+
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    color: #332f2a;
+
+    margin-bottom: 30px;
+}
+
+.about p:last-child {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #777066;
+
+    font-size: 15px;
+
+    line-height: 2;
+}
+
+
+/* =========================================================
+   MEMORIES
+   ========================================================= */
+
+.memories {
+    padding: 120px 7% 140px;
+
+    background: #f6f3ee;
+}
+
+.section-heading {
+    max-width: 850px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    font-weight: 500;
+
+    color: #302c27;
+
+    margin-bottom: 20px;
+}
+
+.section-heading p:last-child {
+    color: #827b72;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   ALBUM CARD
+   ========================================================= */
+
+.album-card {
+    max-width: 1180px;
+
+    margin: 0 auto 70px;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    min-height: 430px;
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px rgba(54, 47, 39, 0.10);
+
+    transition: 0.45s;
+}
+
+.album-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 30px 70px rgba(54, 47, 39, 0.16);
+}
+
+
+/* IMAGE */
+
+.album-image {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 430px;
+}
+
+.album-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.8s ease;
+}
+
+.album-card:hover .album-image img {
+    transform: scale(1.05);
+}
+
+.album-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 55%,
+            rgba(0, 0, 0, 0.12)
+        );
+}
+
+
+/* INFO */
+
+.album-info {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 55px;
+}
+
+.album-date {
+    margin-bottom: 18px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #9b8872;
+}
+
+.album-info h3 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 45px;
+
+    font-weight: 500;
+
+    line-height: 1.15;
+
+    color: #302c27;
+
+    margin-bottom: 20px;
+}
+
+.album-description {
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color: #777168;
+
+    margin-bottom: 35px;
+}
+
+.album-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.album-bottom > span {
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #aaa198;
+}
+
+.album-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid #50493f;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #302c27;
+
+    transition: 0.3s;
+}
+
+.album-link span {
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+.album-link:hover {
+    color: #9b8872;
+
+    border-color: #9b8872;
+}
+
+.album-link:hover span {
+    transform: translateX(6px);
+}
+
+
+/* =========================================================
+   TRIP HERO
+   ========================================================= */
+
+.trip-hero {
+    min-height: 78vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-position: center;
+    background-size: cover;
+
+    color: white;
+}
+
+.trip-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(15, 15, 13, 0.25),
+            rgba(15, 15, 13, 0.65)
+        );
+}
+
+.trip-hero-content {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 100px 20px 40px;
+
+    animation: fadeUp 1s ease;
+}
+
+.trip-hero-content p {
+    margin-bottom: 18px;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    font-weight: 500;
+}
+
+.trip-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(55px, 8vw, 100px);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+.trip-hero-content span {
+    font-size: 15px;
+
+    font-weight: 300;
+
+    color: rgba(255, 255, 255, 0.88);
+}
+
+
+/* =========================================================
+   TRIP INTRO
+   ========================================================= */
+
+.trip-intro {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 110px 25px 80px;
+
+    text-align: center;
+}
+
+.trip-intro h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(38px, 5vw, 60px);
+
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    color: #302c27;
+
+    margin-bottom: 28px;
+}
+
+.trip-description {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #7c746b;
+
+    font-size: 15px;
+
+    line-height: 2;
+}
+
+
+/* =========================================================
+   PHOTO GALLERY
+   ========================================================= */
+
+.trip-photos {
+    padding: 30px 6% 110px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f6f3ee,
+            #ece7df
+        );
+}
+
+.photo-grid {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.photo-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: white;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(50, 45, 38, 0.08);
+
+    aspect-ratio: 4 / 3;
+
+    transition: 0.4s;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 40px rgba(50, 45, 38, 0.16);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.photo-card:hover img {
+    transform: scale(1.06);
+}
+
+.photo-number {
+    position: absolute;
+
+    left: 16px;
+    bottom: 14px;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background: rgba(20, 20, 18, 0.55);
+
+    backdrop-filter: blur(6px);
+
+    color: white;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   IMAGE VIEWER
+   ========================================================= */
+
+.image-viewer {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 3000;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(15, 14, 12, 0.92);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+
+.image-viewer.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+.image-viewer img {
+    max-width: 92vw;
+    max-height: 88vh;
+
+    object-fit: contain;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.close-viewer {
+    position: absolute;
+
+    top: 25px;
+    right: 35px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border-radius: 50%;
+
+    color: white;
+
+    font-size: 30px;
+
+    font-weight: 300;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.close-viewer:hover {
+    background: rgba(255, 255, 255, 0.25);
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   BACK HOME
+   ========================================================= */
+
+.back-home {
+    padding: 70px 20px;
+
+    text-align: center;
+
+    background: #f6f3ee;
+}
+
+.back-home-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 14px 26px;
+
+    border: 1px solid #b7aea3;
+
+    border-radius: 50px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #504a43;
+
+    transition: 0.3s;
+}
+
+.back-home-link:hover {
+    background: #302c27;
+
+    border-color: #302c27;
+
+    color: white;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    padding: 70px 20px 40px;
+
+    text-align: center;
+
+    background: #292722;
+
+    color: white;
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.footer-logo span {
+    font-weight: 300;
+
+    opacity: 0.6;
+}
+
+.footer p {
+    font-size: 13px;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer .copyright {
+    margin-top: 25px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .nav {
+        gap: 18px;
+    }
+
+    .nav a {
+        font-size: 10px;
+    }
+
+    .album-card {
+        grid-template-columns: 1fr;
+    }
+
+    .album-image {
+        min-height: 350px;
+    }
+
+    .album-info {
+        padding: 40px;
+    }
+
+    .album-info h3 {
+        font-size: 38px;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+        height: 65px;
+    }
+
+    .logo {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+
+    .nav {
+        gap: 10px;
+    }
+
+    .nav a {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .home-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .about,
+    .memories {
+        padding: 80px 5%;
+    }
+
+    .album-card {
+        margin-bottom: 45px;
+
+        border-radius: 12px;
+    }
+
+    .album-image {
+        min-height: 280px;
+    }
+
+    .album-info {
+        padding: 30px;
+    }
+
+    .album-info h3 {
+        font-size: 34px;
+    }
+
+    .album-bottom {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .trip-hero {
+        min-height: 65vh;
+    }
+
+    .trip-hero-content h1 {
+        font-size: 48px;
+    }
+
+    .trip-intro {
+        padding: 80px 20px 55px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .photo-card {
+        aspect-ratio: 4 / 3;
+    }
+
+    .close-viewer {
+        top: 15px;
+        right: 15px;
+    }
+
+}

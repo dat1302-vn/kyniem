@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cưới | ASSY5 Memories</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+
+        <div class="logo">
+            ASSY5 <span>MEMORIES</span>
+        </div>
+
+        <nav class="nav">
+            <a href="./index.html">TRANG CHỦ</a>
+            <a href="./index.html#memories">KỶ NIỆM</a>
+            <a href="./index.html#about">GIỚI THIỆU</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+    <section class="trip-hero"
+        style="background-image: url('./images/cuoi/01.jpg');">
+
+        <div class="trip-hero-overlay"></div>
+
+        <div class="trip-hero-content">
+
+            <p>ASSY5 • WEDDING MEMORIES</p>
+
+            <h1>CƯỚI</h1>
+
+            <span>
+                Chúc mừng hạnh phúc • Lưu giữ yêu thương
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTRO ================= -->
+    <section class="trip-intro">
+
+        <p class="section-label">
+            ASSY5 • WEDDING
+        </p>
+
+        <h2>
+            Ngày vui của chúng ta
+        </h2>
+
+        <p class="trip-description">
+            Mỗi đám cưới là một câu chuyện đẹp.
+            Cùng lưu giữ những khoảnh khắc hạnh phúc,
+            những nụ cười và lời chúc phúc dành cho
+            các thành viên trong đại gia đình ASSY5.
+        </p>
+
+    </section>
+
+
+    <!-- ================= PHOTO GALLERY ================= -->
+    <section class="trip-photos">
+
+        <div class="photo-grid">
+
+            <!-- ẢNH 01 -->
+            <div class="photo-card"
+                 onclick="openImage('./images/cuoi/01.jpg')">
+
+                <img
+                    src="./images/cuoi/01.jpg"
+                    alt="Ảnh cưới 01"
+                    loading="eager"
+                >
+
+                <div class="photo-number">01</div>
+
+            </div>
+
+
+            <!-- ẢNH 02 -->
+            <div class="photo-card"
+                 onclick="openImage('./images/cuoi/02.jpg')">
+
+                <img
+                    src="./images/cuoi/02.jpg"
+                    alt="Ảnh cưới 02"
+                    loading="lazy"
+                >
+
+                <div class="photo-number">02</div>
+
+            </div>
+
+
+            <!-- ẢNH 03 -->
+            <div class="photo-card"
+                 onclick="openImage('./images/cuoi/03.jpg')">
+
+                <img
+                    src="./images/cuoi/03.jpg"
+                    alt="Ảnh cưới 03"
+                    loading="lazy"
+                >
+
+                <div class="photo-number">03</div>
+
+            </div>
+
+
+            <!-- ẢNH 04 -->
+            <div class="photo-card"
+                 onclick="openImage('./images/cuoi/04.jpg')">
+
+                <img
+                    src="./images/cuoi/04.jpg"
+                    alt="Ảnh cưới 04"
+                    loading="lazy"
+                >
+
+                <div class="photo-number">04</div>
+
+            </div>
+
+
+            <!-- ẢNH 05 -->
+            <div class="photo-card"
+                 onclick="openImage('./images/cuoi/05.jpg')">
+
+                <img
+                    src="./images/cuoi/05.jpg"
+                    alt="Ảnh cưới 05"
+                    loading="lazy"
+                >
+
+                <div class="photo-number">05</div>
+
+            </div>
+
+
+            <!-- ẢNH 06 -->
+            <div class="photo-card"
+                 onclick="openImage('./images/cuoi/06.jpg')">
+
+                <img
+                    src="./images/cuoi/06.jpg"
+                    alt="Ảnh cưới 06"
+                    loading="lazy"
+                >
+
+                <div class="photo-number">06</div>
+
+            </div>
+
+
+            <!-- ẢNH 07 -->
+            <div class="photo-card"
+                 onclick="openImage('./images/cuoi/07.jpg')">
+
+                <img
+                    src="./images/cuoi/07.jpg"
+                    alt="Ảnh cưới 07"
+                    loading="lazy"
+                >
+
+                <div class="photo-number">07</div>
+
+            </div>
+
+
+            <!-- ẢNH 08 -->
+            <div class="photo-card"
+                 onclick="openImage('./images/cuoi/08.jpg')">
+
+                <img
+                    src="./images/cuoi/08.jpg"
+                    alt="Ảnh cưới 08"
+                    loading="lazy"
+                >
+
+                <div class="photo-number">08</div>
+
+            </div>
+
+
+            <!-- ẢNH 09 -->
+            <div class="photo-card"
+                 onclick="openImage('./images/cuoi/09.jpg')">
+
+                <img
+                    src="./images/cuoi/09.jpg"
+                    alt="Ảnh cưới 09"
+                    loading="lazy"
+                >
+
+                <div class="photo-number">09</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BACK HOME ================= -->
+    <section class="back-home">
+
+        <a href="./index.html" class="back-home-link">
+            ← QUAY LẠI TRANG CHỦ
+        </a>
+
+    </section>
+
+
+    <!-- ================= IMAGE VIEWER ================= -->
+    <div
+        class="image-viewer"
+        id="imageViewer"
+        onclick="closeImage()"
+    >
+
+        <button
+            class="close-viewer"
+            type="button"
+            aria-label="Đóng ảnh"
+            onclick="event.stopPropagation(); closeImage()"
+        >
+            ×
+        </button>
+
+        <img
+            id="largeImage"
+            src=""
+            alt="Ảnh đám cưới phóng to"
+        >
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="footer-logo">
+            ASSY5 <span>MEMORIES</span>
+        </div>
+
+        <p>
+            Chúc phúc cho những hành trình mới.
+        </p>
+
+        <p class="copyright">
+            © ASSY5 Memories
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="./script.js"></script>
+
+</body>
+</html>
